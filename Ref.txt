@@ -1,0 +1,25 @@
+
+https://github.com/search?q=Car+price+prediction+model+random+forest&type=Repositories
+
+Same dataset		 -https://github.com/Rushabh75/Car-price-prediction-model/blob/main/Car%20Price%20prediction%20model.ipynb
+
+Same dataset		- https://github.com/abhishekchandra2522k/Old-Cars-Price-Prediction-Model/blob/master/MajorProjectFinal.ipynb
+
+https://github.com/abhashpanwar/used-car-price-prediction		- thoda high quality
+
+https://github.com/vikrantarora25/Car-Price-Prediction-Highly-Comprehensive-Linear-Regression-Project-/blob/master/Car%20Price%20Prediction_MLR%20Project_Github_REVISED.ipynb
+
+https://github.com/ManoranjanThakur/Car-Price-Prediction/blob/master/Car%20Price%20Prediction.ipynb
+
+https://github.com/nikhilkr29/Car-Price-Prediction/blob/main/CarPricePredict.ipynb -copy of singh
+
+https://github.com/singh41199/Car_price_prediction_using_RandomForest/blob/main/Untitled.ipynb -copy of nikhil
+
+
+
+
+end to end
+
+https://github.com/Balaji-Gowda/Car-Price-Prediction-App
+
+https://github.com/singh41199/Car_price_prediction_using_RandomForest/blob/main/Untitled.ipynb 

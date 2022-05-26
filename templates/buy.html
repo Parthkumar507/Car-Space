@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+<!-- {% block title %}Home {% endblock title %} -->
+{% block body %}
+              
+                <div class="form-custom-input">
+                  <form action="{{ url_for('buydata')}}" name="myForm" onsubmit="return validateForm()" method="post" id="Buy-form">
+                    <h1 class="">Choose your desired choices </h1>
+                    <!-- <h3>How Many Kilometers Drived?</h3><input class="form-input" name="Kms_Driven" required="required"> -->
+
+                    <div class="form-group ">
+                        <label for="Age-of-Car">What age of Car you desire</label>
+
+                        <div>
+                            <input type="number" class="form-control buy-form-input" id="Age-of-Car" name="minYear" required min="0" max="20" placeholder="Min Age">
+                            <input type="number" class="form-control buy-form-input" id="Age-of-Car" name="maxYear" required min="0" max="20" placeholder="Max Age">
+                        </div>
+                     </div>
+
+                    <div class="form-group ">
+                        <label for="Engine">What Engine of Car (in thousands km) :</label>
+                        <div>
+                            <input type="number" class="form-control buy-form-input " id="Engine" name="minEngine_CC" required min="600" max="5000" placeholder="min Range is 600CC ">
+                            <input type="number" class="form-control buy-form-input " id="Engine" name="maxEngine_CC" required min="600" max="5000" placeholder="max Engine  5000CC">
+                          
+                        </div>
+                     </div>
+
+                    <div class="form-group">
+                      <label for="Power"> What Power of Car you desire in bhp</label>
+                      <div>
+                        <input type="number" class="form-control  buy-form-input " id="Power" name="minPower" required min="0" max="300" placeholder="Range is 0 to 300bhp">
+                        <input type="number" class="form-control  buy-form-input " id="Power" name="maxPower" required min="0" max="300" placeholder="Range is 0 to 300bhp">
+
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="mil">What Mileage of Car you desire in Km/L</label>
+                      <div>
+                        <input type="number" class="form-control buy-form-input " id="mil" name="minMileage" required min="0" max="40" placeholder="Range is 0 to 40 Km/L">
+                      <input type="number" class="form-control buy-form-input " id="mil" name="maxMileage" required min="0" max="40" placeholder="Range is 0 to 40 Km/L">
+                          
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="Fuel">Fuel Type of Car</label>
+                      <select class="form-control" id="Fuel" name="Fuel_Type">
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="CNG">CNG</option>
+                        <option value="LPG">LPG</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="Seat">Number of Seats</label>
+                      <select class="form-control" id="Seat" name="Seats">
+                        <!-- <option value="2">2</option> -->
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="10">10</option>
+
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="Transmission">Transmission of Car</label>
+                      <select class="form-control" id="Transmission" name="Transmission_Mannual">
+                        <option value="Manual">Manual</option>
+                        <option value="Automatic">Automatic</option>
+                      </select>
+                    </div>
+                    <br><br><button class="form-input form-button" type="submit">Show the list</button>
+                    <br>
+                  </form>
+
+
+                  <!-- <br><br>
+                  <h3>{{ prediction_text }}<h3>
+                </div> -->
+
+                {% endblock body %}
