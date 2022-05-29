@@ -1,81 +1,93 @@
 {% extends 'base.html' %}
 <!-- {% block title %}Home {% endblock title %} -->
 {% block body %}
-              <section class="section-index-sell-form">
-
-                <div class="form-custom-input">
-                  <form action="{{ url_for('predict')}}" name="myForm" onsubmit="return validateForm()" method="post" id="Sell-form">
-                    <h1 class="">Predict your Selling Price</h1>
-                    <!-- <h3>How Many Kilometers Drived?</h3><input class="form-input" name="Kms_Driven" required="required"> -->
-
-                    <div class="form-group ">
-                      <label for="Age-of-Car">Year of Purchase</label>
-                      <input type="number" class="form-control " id="Age-of-Car" name="Year" required min="2004" max="2022" placeholder="Upto 2004 ">
-                    </div>
-                    <div class="form-group ">
-                      <label for="Engine">Engine of Car in CC</label>
-                      <input type="number" class="form-control  " id="Engine" name="Engine_CC" required min="600" max="5000" placeholder="Range is 600CC to 5000CC">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="Power">Power of Car in bhp</label>
-                      <input type="number" class="form-control input-sm " id="Power" name="Power" required min="0" max="300" placeholder="Range is 0 to 300bhp">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="mil">Mileage of Car in Km/L</label>
-                      <input type="number" class="form-control input-sm " id="mil" name="Mileage" required min="0" max="40" placeholder="Range is 0 to 40 Km/L">
-                    </div>
-
-                    <div class="form-group">
-
-                      <label for="Kms">Kilometer driven by Car (in thousands km)</label>
-                      <input type="number" class="form-control input-sm " id="Kms" name="Kms_Driven" required min="0" max="300" placeholder="Range is 0 to 300 thousands km">
-                    </div>
-                    <div class="form-group">
-                      <label for="Own">Previous owner of Car</label>
-                      <select class="form-control" id="Own" name="Owner">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="Fuel">Fuel Type of Car</label>
-                      <select class="form-control" id="Fuel" name="Fuel_Type">
-                        <option value="Petrol">Petrol</option>
-                        <option value="Diesel">Diesel</option>
-                        <option value="CNG">CNG</option>
-                        <option value="LPG">LPG</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="Seat">Number of Seats</label>
-                      <select class="form-control" id="Seat" name="Seats">
-                        <!-- <option value="2">2</option> -->
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="10">10</option>
-
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="Transmission">Transmission of Car</label>
-                      <select class="form-control" id="Transmission" name="Transmission_Mannual">
-                        <option value="Manual">Manual</option>
-                        <option value="Automatic">Automatic</option>
-                      </select>
-                    </div>
-                    <br><br><button class="form-input form-button" type="submit">Calculate the Selling Price</button>
-                    <br>
-                  </form>
 
 
-                  <br><br>
-                  <h3>{{ prediction_text }}<h3>
-                </div>
-              </section>
 
-                {% endblock body %}
+<section>
+  <div class="form-custom-input">
+    <form action="{{ url_for('predict')}}" name="myForm" onsubmit="return validateForm()" method="post" id="Sell-form">
+      <h1 class="">Predict your Car Price</h1>
+      <!-- <h3>How Many Kilometers Drived?</h3><input class="form-input" name="Kms_Driven" required="required"> -->
+
+      <div class="form-group ">
+        <label for="Age-of-Car">Year of Purchase</label>
+        <input type="number" class="form-control " id="Age-of-Car" name="Year" required min="2004" max="2022"
+          placeholder="Upto 2004 ">
+      </div>
+      <div class="form-group ">
+        <label for="Engine">Engine of Car in CC</label>
+        <input type="number" class="form-control  " id="Engine" name="Engine_CC" required min="600" max="5000"
+          placeholder="Range is 600CC to 5000CC">
+      </div>
+
+      <div class="form-group">
+        <label for="Power">Power of Car in bhp</label>
+        <input type="number" class="form-control input-sm " id="Power" name="Power" required min="0" max="300"
+          placeholder="Range is 0 to 300bhp">
+      </div>
+
+      <div class="form-group">
+        <label for="mil">Mileage of Car in Km/L</label>
+        <input type="number" class="form-control input-sm " id="mil" name="Mileage" required min="0" max="40"
+          placeholder="Range is 0 to 40 Km/L">
+      </div>
+
+      <div class="form-group">
+
+        <label for="Kms">Kilometer driven by Car (in thousands km)</label>
+        <input type="number" class="form-control input-sm " id="Kms" name="Kms_Driven" required min="0" max="300"
+          placeholder="Range is 0 to 300 thousands km">
+      </div>
+      <div class="form-group">
+        <label for="Own">Previous owner of Car</label>
+        <select class="form-control" id="Own" name="Owner">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Fuel">Fuel Type of Car</label>
+        <select class="form-control" id="Fuel" name="Fuel_Type">
+          <option value="Petrol">Petrol</option>
+          <option value="Diesel">Diesel</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Seat">Number of Seats</label>
+        <select class="form-control" id="Seat" name="Seats">
+          <!-- <option value="2">2</option> -->
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Transmission">Transmission of Car</label>
+        <select class="form-control" id="Transmission" name="Transmission_Mannual">
+          <option value="Manual">Manual</option>
+          <option value="Automatic">Automatic</option>
+        </select>
+      </div>
+      <br><br><button class="form-input form-button" type="submit">Calculate the Selling Price</button>
+      <br>
+    </form>
+
+
+    <br><br>
+    <h3>{{ prediction_text }}<h3>
+
+     <div id="timeline-divider">
+        <div class="timeline-traveller">
+            <div>
+                <i class="fa-solid fa-car-side" aria-hidden="true"></i>
+            </div>
+        </div>
+
+
+  </div>
+</section>
+
+{% endblock body %}

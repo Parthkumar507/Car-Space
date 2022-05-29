@@ -1,0 +1,1183 @@
+{% extends 'base.html' %}
+<!-- {% block title %}Home {% endblock title %} -->
+{% block body %}
+
+
+
+<section>
+
+<div style="margin-top: 250px;">
+
+
+<h2>List of Available Car</h2>
+
+
+<input id="searchbar" onkeyup="search_Table()" type="text" name="search" placeholder="Search by Car name">
+<button onclick="sortTable()" style="position: absolute;right: 5%;">Sort By Price</button>
+</div>
+<table class="dataframe table table-striped table-bordered table-hover">
+    <caption>List of Availabel Car</caption>
+
+<thead>
+  <tr class="table-info" style="text-align: center;">
+    <th ></th>
+    <th style="cursor:pointer"   onclick="sortTable(0)">Name </th>
+    <th>km Driven (in thousands km)</th>
+    <th>Fuel Type</th>
+    <th style="cursor:pointer" onclick="sortTable(3)">Price(in lakhs)</th>
+  </tr>
+</thead>
+<tbody>
+
+  <tr>
+    <th>1</th>
+    <td>Hyundai Creta 1.6 CRDi SX Option</td>
+    <td>41.000</td>
+    <td>Diesel</td>
+    <td>12.50</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td>Honda Jazz V</td>
+    <td>46.000</td>
+    <td>Petrol</td>
+    <td>4.50</td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td>Maruti Ertiga VDI</td>
+    <td>87.000</td>
+    <td>Diesel</td>
+    <td>6.00</td>
+  </tr>
+  <tr>
+    <th>4</th>
+    <td>Audi A4 New 2.0 TDI Multitronic</td>
+    <td>40.670</td>
+    <td>Diesel</td>
+    <td>17.74</td>
+  </tr>
+  <tr>
+    <th>5</th>
+    <td>Hyundai EON LPG Era Plus Option</td>
+    <td>75.000</td>
+    <td>LPG</td>
+    <td>2.35</td>
+  </tr>
+  <tr>
+    <th>6</th>
+    <td>Nissan Micra Diesel XV</td>
+    <td>86.999</td>
+    <td>Diesel</td>
+    <td>3.50</td>
+  </tr>
+  <tr>
+    <th>7</th>
+    <td>Toyota Innova Crysta 2.8 GX AT 8S</td>
+    <td>36.000</td>
+    <td>Diesel</td>
+    <td>17.50</td>
+  </tr>
+  <tr>
+    <th>8</th>
+    <td>Volkswagen Vento Diesel Comfortline</td>
+    <td>64.430</td>
+    <td>Diesel</td>
+    <td>5.20</td>
+  </tr>
+  <tr>
+    <th>9</th>
+    <td>Tata Indica Vista Quadrajet LS</td>
+    <td>65.932</td>
+    <td>Diesel</td>
+    <td>1.95</td>
+  </tr>
+  <tr>
+    <th>10</th>
+    <td>Maruti Ciaz Zeta</td>
+    <td>25.692</td>
+    <td>Petrol</td>
+    <td>9.95</td>
+  </tr>
+  <tr>
+    <th>11</th>
+    <td>Honda City 1.5 V AT Sunroof</td>
+    <td>60.000</td>
+    <td>Petrol</td>
+    <td>4.49</td>
+  </tr>
+  <tr>
+    <th>12</th>
+    <td>Maruti Swift VDI BSIV</td>
+    <td>64.424</td>
+    <td>Diesel</td>
+    <td>5.60</td>
+  </tr>
+  <tr>
+    <th>13</th>
+    <td>Land Rover Range Rover 2.2L Pure</td>
+    <td>72.000</td>
+    <td>Diesel</td>
+    <td>27.00</td>
+  </tr>
+  <tr>
+    <th>14</th>
+    <td>Mitsubishi Pajero Sport 4X4</td>
+    <td>110.000</td>
+    <td>Diesel</td>
+    <td>15.00</td>
+  </tr>
+  <tr>
+    <th>15</th>
+    <td>Honda Amaze S i-Dtech</td>
+    <td>58.950</td>
+    <td>Diesel</td>
+    <td>5.40</td>
+  </tr>
+  <tr>
+    <th>16</th>
+    <td>Maruti Swift DDiS VDI</td>
+    <td>25.000</td>
+    <td>Diesel</td>
+    <td>5.99</td>
+  </tr>
+  <tr>
+    <th>17</th>
+    <td>Renault Duster 85PS Diesel RxL Plus</td>
+    <td>77.469</td>
+    <td>Diesel</td>
+    <td>6.34</td>
+  </tr>
+  <tr>
+    <th>18</th>
+    <td>Mercedes-Benz New C-Class C 220 CDI BE Avantgare</td>
+    <td>78.500</td>
+    <td>Diesel</td>
+    <td>28.00</td>
+  </tr>
+  <tr>
+    <th>19</th>
+    <td>BMW 3 Series 320d</td>
+    <td>32.982</td>
+    <td>Diesel</td>
+    <td>18.55</td>
+  </tr>
+  <tr>
+    <th>20</th>
+    <td>Maruti S Cross DDiS 200 Alpha</td>
+    <td>55.392</td>
+    <td>Diesel</td>
+    <td>8.25</td>
+  </tr>
+  <tr>
+    <th>21</th>
+    <td>Audi A6 2011-2015 35 TFSI Technology</td>
+    <td>55.985</td>
+    <td>Petrol</td>
+    <td>23.50</td>
+  </tr>
+  <tr>
+    <th>22</th>
+    <td>Hyundai i20 1.2 Magna</td>
+    <td>45.807</td>
+    <td>Petrol</td>
+    <td>1.87</td>
+  </tr>
+  <tr>
+    <th>23</th>
+    <td>Volkswagen Vento Petrol Highline AT</td>
+    <td>33.000</td>
+    <td>Petrol</td>
+    <td>2.85</td>
+  </tr>
+  <tr>
+    <th>24</th>
+    <td>Honda City Corporate Edition</td>
+    <td>51.920</td>
+    <td>Petrol</td>
+    <td>4.25</td>
+  </tr>
+  <tr>
+    <th>25</th>
+    <td>Nissan Micra Diesel XV</td>
+    <td>54.000</td>
+    <td>Diesel</td>
+    <td>4.25</td>
+  </tr>
+  <tr>
+    <th>26</th>
+    <td>Maruti Alto K10 2010-2014 VXI</td>
+    <td>54.000</td>
+    <td>Petrol</td>
+    <td>2.75</td>
+  </tr>
+  <tr>
+    <th>27</th>
+    <td>Honda WRV i-VTEC VX</td>
+    <td>37.430</td>
+    <td>Petrol</td>
+    <td>9.90</td>
+  </tr>
+  <tr>
+    <th>28</th>
+    <td>Toyota Innova 2.5 V Diesel 7-seater</td>
+    <td>262.000</td>
+    <td>Diesel</td>
+    <td>4.00</td>
+  </tr>
+  <tr>
+    <th>29</th>
+    <td>Renault Duster 110PS Diesel RxZ Pack</td>
+    <td>62.000</td>
+    <td>Diesel</td>
+    <td>7.75</td>
+  </tr>
+  <tr>
+    <th>30</th>
+    <td>Toyota Corolla Altis G</td>
+    <td>87.615</td>
+    <td>Petrol</td>
+    <td>6.75</td>
+  </tr>
+  <tr>
+    <th>31</th>
+    <td>Mahindra Ssangyong Rexton RX7</td>
+    <td>72.000</td>
+    <td>Diesel</td>
+    <td>12.50</td>
+  </tr>
+  <tr>
+    <th>32</th>
+    <td>Audi A6 2.7 TDI</td>
+    <td>35.000</td>
+    <td>Diesel</td>
+    <td>11.50</td>
+  </tr>
+  <tr>
+    <th>33</th>
+    <td>Volkswagen Vento 1.6 Highline</td>
+    <td>55.431</td>
+    <td>Petrol</td>
+    <td>6.98</td>
+  </tr>
+  <tr>
+    <th>34</th>
+    <td>Maruti Wagon R LXI BSIII</td>
+    <td>83.816</td>
+    <td>Petrol</td>
+    <td>1.85</td>
+  </tr>
+  <tr>
+    <th>35</th>
+    <td>Maruti Vitara Brezza ZDi Plus</td>
+    <td>50.075</td>
+    <td>Diesel</td>
+    <td>8.63</td>
+  </tr>
+  <tr>
+    <th>36</th>
+    <td>Mahindra KUV 100 mFALCON G80 K6 5str AW</td>
+    <td>52.000</td>
+    <td>Petrol</td>
+    <td>4.85</td>
+  </tr>
+  <tr>
+    <th>37</th>
+    <td>Mercedes-Benz M-Class ML 350 CDI</td>
+    <td>85.000</td>
+    <td>Diesel</td>
+    <td>28.00</td>
+  </tr>
+  <tr>
+    <th>38</th>
+    <td>Volkswagen Polo Diesel Trendline 1.2L</td>
+    <td>62.000</td>
+    <td>Diesel</td>
+    <td>5.00</td>
+  </tr>
+  <tr>
+    <th>39</th>
+    <td>Maruti Alto LXi</td>
+    <td>90.000</td>
+    <td>Petrol</td>
+    <td>1.25</td>
+  </tr>
+  <tr>
+    <th>40</th>
+    <td>Tata Nano LX SE</td>
+    <td>19.698</td>
+    <td>Petrol</td>
+    <td>1.53</td>
+  </tr>
+  <tr>
+    <th>41</th>
+    <td>Mahindra KUV 100 mFALCON D75 K8 Dual Tone</td>
+    <td>22.033</td>
+    <td>Diesel</td>
+    <td>5.58</td>
+  </tr>
+  <tr>
+    <th>42</th>
+    <td>Hyundai i20 Magna Optional 1.2</td>
+    <td>35.487</td>
+    <td>Petrol</td>
+    <td>4.74</td>
+  </tr>
+  <tr>
+    <th>43</th>
+    <td>Hyundai Elantra 2.0 SX Option AT</td>
+    <td>46.374</td>
+    <td>Petrol</td>
+    <td>8.85</td>
+  </tr>
+  <tr>
+    <th>44</th>
+    <td>Toyota Corolla Altis G AT</td>
+    <td>52.001</td>
+    <td>Petrol</td>
+    <td>10.11</td>
+  </tr>
+  <tr>
+    <th>45</th>
+    <td>Hyundai Elantra CRDi</td>
+    <td>58.005</td>
+    <td>Diesel</td>
+    <td>4.25</td>
+  </tr>
+  <tr>
+    <th>46</th>
+    <td>Toyota Innova Crysta 2.7 GX MT</td>
+    <td>70.704</td>
+    <td>Petrol</td>
+    <td>10.95</td>
+  </tr>
+  <tr>
+    <th>47</th>
+    <td>Hyundai Xcent 1.1 CRDi S</td>
+    <td>75.000</td>
+    <td>Diesel</td>
+    <td>3.85</td>
+  </tr>
+  <tr>
+    <th>48</th>
+    <td>Mahindra Thar CRDe AC</td>
+    <td>75.800</td>
+    <td>Diesel</td>
+    <td>5.50</td>
+  </tr>
+  <tr>
+    <th>49</th>
+    <td>Audi A4 2.0 TDI 177 Bhp Premium Plus</td>
+    <td>13.648</td>
+    <td>Diesel</td>
+    <td>21.43</td>
+  </tr>
+  <tr>
+    <th>50</th>
+    <td>Maruti Swift LDI</td>
+    <td>52.000</td>
+    <td>Diesel</td>
+    <td>4.25</td>
+  </tr>
+  <tr>
+    <th>51</th>
+    <td>Maruti Swift Ldi BSIV</td>
+    <td>53.000</td>
+    <td>Diesel</td>
+    <td>3.30</td>
+  </tr>
+  <tr>
+    <th>52</th>
+    <td>Maruti Swift VDI</td>
+    <td>65.650</td>
+    <td>Diesel</td>
+    <td>3.85</td>
+  </tr>
+  <tr>
+    <th>53</th>
+    <td>Hyundai Grand i10 Sportz</td>
+    <td>54.000</td>
+    <td>Petrol</td>
+    <td>3.60</td>
+  </tr>
+  <tr>
+    <th>54</th>
+    <td>Volkswagen Vento 2013-2015 1.6 Comfortline</td>
+    <td>39.000</td>
+    <td>Petrol</td>
+    <td>3.99</td>
+  </tr>
+  <tr>
+    <th>55</th>
+    <td>Renault KWID RXT</td>
+    <td>16.542</td>
+    <td>Petrol</td>
+    <td>3.30</td>
+  </tr>
+  <tr>
+    <th>56</th>
+    <td>Hyundai i10 Asta</td>
+    <td>32.000</td>
+    <td>Petrol</td>
+    <td>2.07</td>
+  </tr>
+  <tr>
+    <th>57</th>
+    <td>Nissan X-Trail SLX AT</td>
+    <td>121.812</td>
+    <td>Diesel</td>
+    <td>7.75</td>
+  </tr>
+  <tr>
+    <th>58</th>
+    <td>Maruti Zen Estilo VXI BSIII</td>
+    <td>39.300</td>
+    <td>Petrol</td>
+    <td>2.25</td>
+  </tr>
+  <tr>
+    <th>59</th>
+    <td>Toyota Innova Crysta 2.4 GX MT 8S</td>
+    <td>22.000</td>
+    <td>Diesel</td>
+    <td>16.50</td>
+  </tr>
+  <tr>
+    <th>60</th>
+    <td>Ford Figo Diesel Titanium</td>
+    <td>72.000</td>
+    <td>Diesel</td>
+    <td>2.75</td>
+  </tr>
+  <tr>
+    <th>61</th>
+    <td>Mercedes-Benz New C-Class C 200 CGI Avantgarde</td>
+    <td>58.000</td>
+    <td>Petrol</td>
+    <td>26.70</td>
+  </tr>
+  <tr>
+    <th>62</th>
+    <td>Mercedes-Benz New C-Class 200 CDI Classic</td>
+    <td>65.000</td>
+    <td>Diesel</td>
+    <td>10.00</td>
+  </tr>
+  <tr>
+    <th>63</th>
+    <td>Tata Indica V2 eLS</td>
+    <td>178.000</td>
+    <td>Diesel</td>
+    <td>2.50</td>
+  </tr>
+  <tr>
+    <th>64</th>
+    <td>Audi A4 2.0 TDI Multitronic</td>
+    <td>65.664</td>
+    <td>Diesel</td>
+    <td>13.50</td>
+  </tr>
+  <tr>
+    <th>65</th>
+    <td>Honda City ZX CVT</td>
+    <td>63.000</td>
+    <td>Petrol</td>
+    <td>1.85</td>
+  </tr>
+  <tr>
+    <th>66</th>
+    <td>Maruti Ertiga SHVS VDI</td>
+    <td>63.000</td>
+    <td>Diesel</td>
+    <td>8.15</td>
+  </tr>
+  <tr>
+    <th>67</th>
+    <td>Hyundai Creta 1.4 E Plus Diesel</td>
+    <td>13.000</td>
+    <td>Diesel</td>
+    <td>10.50</td>
+  </tr>
+  <tr>
+    <th>68</th>
+    <td>Mahindra XUV500 W8 4WD</td>
+    <td>55.729</td>
+    <td>Diesel</td>
+    <td>9.65</td>
+  </tr>
+  <tr>
+    <th>69</th>
+    <td>Hyundai i10 Sportz 1.2 AT</td>
+    <td>45.178</td>
+    <td>Petrol</td>
+    <td>3.48</td>
+  </tr>
+  <tr>
+    <th>70</th>
+    <td>Nissan Terrano XV D Pre</td>
+    <td>56.066</td>
+    <td>Diesel</td>
+    <td>6.92</td>
+  </tr>
+  <tr>
+    <th>71</th>
+    <td>Honda Brio VX AT</td>
+    <td>37.300</td>
+    <td>Petrol</td>
+    <td>6.46</td>
+  </tr>
+  <tr>
+    <th>72</th>
+    <td>Audi A6 2.0 TDI Design Edition</td>
+    <td>56.000</td>
+    <td>Diesel</td>
+    <td>29.50</td>
+  </tr>
+  <tr>
+    <th>73</th>
+    <td>Ford Fiesta 1.4 SXi TDCi</td>
+    <td>111.111</td>
+    <td>Diesel</td>
+    <td>2.00</td>
+  </tr>
+  <tr>
+    <th>74</th>
+    <td>Toyota Innova 2.0 G1</td>
+    <td>230.000</td>
+    <td>Petrol</td>
+    <td>4.50</td>
+  </tr>
+  <tr>
+    <th>75</th>
+    <td>Toyota Innova 2.5 VX 7 STR BSIV</td>
+    <td>104.000</td>
+    <td>Diesel</td>
+    <td>11.75</td>
+  </tr>
+  <tr>
+    <th>76</th>
+    <td>Maruti Swift VDI</td>
+    <td>95.100</td>
+    <td>Diesel</td>
+    <td>3.75</td>
+  </tr>
+  <tr>
+    <th>77</th>
+    <td>Tata Zest Revotron 1.2T XE</td>
+    <td>70.000</td>
+    <td>Petrol</td>
+    <td>4.50</td>
+  </tr>
+  <tr>
+    <th>78</th>
+    <td>Honda Amaze SX i-VTEC</td>
+    <td>54.944</td>
+    <td>Petrol</td>
+    <td>4.82</td>
+  </tr>
+  <tr>
+    <th>79</th>
+    <td>Ford Figo Diesel ZXI</td>
+    <td>70.337</td>
+    <td>Diesel</td>
+    <td>2.80</td>
+  </tr>
+  <tr>
+    <th>80</th>
+    <td>Maruti Ritz VDi</td>
+    <td>99.638</td>
+    <td>Diesel</td>
+    <td>3.11</td>
+  </tr>
+  <tr>
+    <th>81</th>
+    <td>Honda City i VTEC E</td>
+    <td>52.000</td>
+    <td>Petrol</td>
+    <td>3.25</td>
+  </tr>
+  <tr>
+    <th>82</th>
+    <td>BMW 5 Series 2003-2012 525d</td>
+    <td>75.000</td>
+    <td>Diesel</td>
+    <td>13.90</td>
+  </tr>
+  <tr>
+    <th>83</th>
+    <td>Hyundai i10 Sportz 1.2</td>
+    <td>95.980</td>
+    <td>Petrol</td>
+    <td>2.25</td>
+  </tr>
+  <tr>
+    <th>84</th>
+    <td>Hyundai Grand i10 Sportz</td>
+    <td>16.000</td>
+    <td>Petrol</td>
+    <td>5.75</td>
+  </tr>
+  <tr>
+    <th>85</th>
+    <td>Hyundai Santro Xing XO</td>
+    <td>73.745</td>
+    <td>Petrol</td>
+    <td>2.10</td>
+  </tr>
+  <tr>
+    <th>86</th>
+    <td>Honda Amaze SX i-VTEC</td>
+    <td>18.949</td>
+    <td>Petrol</td>
+    <td>5.00</td>
+  </tr>
+  <tr>
+    <th>87</th>
+    <td>Toyota Fortuner 4x2 Manual</td>
+    <td>107.000</td>
+    <td>Diesel</td>
+    <td>16.50</td>
+  </tr>
+  <tr>
+    <th>88</th>
+    <td>Audi A6 2011-2015 35 TDI Premium</td>
+    <td>48.367</td>
+    <td>Diesel</td>
+    <td>39.58</td>
+  </tr>
+  <tr>
+    <th>89</th>
+    <td>Ford Ecosport 1.5 DV5 MT Titanium Optional</td>
+    <td>57.000</td>
+    <td>Diesel</td>
+    <td>5.50</td>
+  </tr>
+  <tr>
+    <th>90</th>
+    <td>Mahindra XUV500 W8 2WD</td>
+    <td>58.000</td>
+    <td>Diesel</td>
+    <td>8.10</td>
+  </tr>
+  <tr>
+    <th>91</th>
+    <td>Honda Amaze SX i-DTEC</td>
+    <td>30.000</td>
+    <td>Diesel</td>
+    <td>3.50</td>
+  </tr>
+  <tr>
+    <th>92</th>
+    <td>Volkswagen Polo Diesel Highline 1.2L</td>
+    <td>34.212</td>
+    <td>Diesel</td>
+    <td>2.79</td>
+  </tr>
+  <tr>
+    <th>93</th>
+    <td>Hyundai Verna Transform SX VGT CRDi</td>
+    <td>70.002</td>
+    <td>Diesel</td>
+    <td>3.45</td>
+  </tr>
+  <tr>
+    <th>94</th>
+    <td>Maruti Wagon R VXI BS IV</td>
+    <td>62.000</td>
+    <td>Petrol</td>
+    <td>4.45</td>
+  </tr>
+  <tr>
+    <th>95</th>
+    <td>Volkswagen Polo Petrol Highline 1.6L</td>
+    <td>62.001</td>
+    <td>Petrol</td>
+    <td>2.65</td>
+  </tr>
+  <tr>
+    <th>96</th>
+    <td>Hyundai i20 1.4 CRDi Sportz</td>
+    <td>78.958</td>
+    <td>Diesel</td>
+    <td>3.80</td>
+  </tr>
+  <tr>
+    <th>97</th>
+    <td>Hyundai i20 Asta 1.2</td>
+    <td>30.180</td>
+    <td>Petrol</td>
+    <td>4.65</td>
+  </tr>
+  <tr>
+    <th>98</th>
+    <td>Datsun GO Plus T Petrol</td>
+    <td>32.851</td>
+    <td>Petrol</td>
+    <td>3.95</td>
+  </tr>
+  <tr>
+    <th>99</th>
+    <td>Audi A4 3.0 TDI Quattro Premium</td>
+    <td>30.000</td>
+    <td>Diesel</td>
+    <td>9.80</td>
+  </tr>
+  <tr>
+    <th>100</th>
+    <td>Hyundai i20 2015-2017 Asta</td>
+    <td>66.000</td>
+    <td>Petrol</td>
+    <td>2.70</td>
+  </tr>
+  <tr>
+    <th>101</th>
+    <td>Maruti Omni 5 Str STD</td>
+    <td>93.850</td>
+    <td>Petrol</td>
+    <td>2.41</td>
+  </tr>
+  <tr>
+    <th>102</th>
+    <td>Toyota Etios Liva 1.2 G</td>
+    <td>53.000</td>
+    <td>Petrol</td>
+    <td>3.90</td>
+  </tr>
+  <tr>
+    <th>103</th>
+    <td>Jaguar XF 3.0 Litre S Premium Luxury</td>
+    <td>78.000</td>
+    <td>Diesel</td>
+    <td>24.00</td>
+  </tr>
+  <tr>
+    <th>104</th>
+    <td>Mahindra XUV500 W8 2WD</td>
+    <td>65.000</td>
+    <td>Diesel</td>
+    <td>5.75</td>
+  </tr>
+  <tr>
+    <th>105</th>
+    <td>Hyundai Verna 1.6 SX CRDI (O) AT</td>
+    <td>40.000</td>
+    <td>Diesel</td>
+    <td>5.25</td>
+  </tr>
+  <tr>
+    <th>106</th>
+    <td>Toyota Innova Crysta 2.8 ZX AT</td>
+    <td>30.000</td>
+    <td>Diesel</td>
+    <td>19.25</td>
+  </tr>
+  <tr>
+    <th>107</th>
+    <td>Maruti Eeco 5 Seater AC</td>
+    <td>38.053</td>
+    <td>Petrol</td>
+    <td>3.91</td>
+  </tr>
+  <tr>
+    <th>108</th>
+    <td>Tata Nano Twist XT</td>
+    <td>25.500</td>
+    <td>Petrol</td>
+    <td>2.15</td>
+  </tr>
+  <tr>
+    <th>109</th>
+    <td>BMW 3 Series 320d Luxury Line</td>
+    <td>56.087</td>
+    <td>Diesel</td>
+    <td>20.75</td>
+  </tr>
+  <tr>
+    <th>110</th>
+    <td>Honda Civic 2006-2010 1.8 V MT</td>
+    <td>71.088</td>
+    <td>Petrol</td>
+    <td>3.35</td>
+  </tr>
+  <tr>
+    <th>111</th>
+    <td>Toyota Innova 2.5 VX (Diesel) 7 Seater</td>
+    <td>55.000</td>
+    <td>Diesel</td>
+    <td>11.11</td>
+  </tr>
+  <tr>
+    <th>112</th>
+    <td>Volvo V40 Cross Country D3</td>
+    <td>32.700</td>
+    <td>Diesel</td>
+    <td>20.00</td>
+  </tr>
+  <tr>
+    <th>113</th>
+    <td>Nissan Micra XV CVT</td>
+    <td>39.882</td>
+    <td>Petrol</td>
+    <td>6.55</td>
+  </tr>
+  <tr>
+    <th>114</th>
+    <td>BMW 5 Series 2010-2013 525i</td>
+    <td>128.000</td>
+    <td>Petrol</td>
+    <td>7.00</td>
+  </tr>
+  <tr>
+    <th>115</th>
+    <td>Maruti Vitara Brezza VDi</td>
+    <td>55.000</td>
+    <td>Diesel</td>
+    <td>7.50</td>
+  </tr>
+  <tr>
+    <th>116</th>
+    <td>Hyundai Santro Xing XL eRLX Euro III</td>
+    <td>102.000</td>
+    <td>Petrol</td>
+    <td>0.85</td>
+  </tr>
+  <tr>
+    <th>117</th>
+    <td>Mercedes-Benz B Class B200 CDI</td>
+    <td>53.753</td>
+    <td>Diesel</td>
+    <td>16.75</td>
+  </tr>
+  <tr>
+    <th>118</th>
+    <td>Hyundai Verna CRDi 1.6 SX Option</td>
+    <td>10.250</td>
+    <td>Diesel</td>
+    <td>10.95</td>
+  </tr>
+  <tr>
+    <th>119</th>
+    <td>Maruti Wagon R LXI BS IV</td>
+    <td>43.874</td>
+    <td>Petrol</td>
+    <td>2.45</td>
+  </tr>
+  <tr>
+    <th>120</th>
+    <td>Tata Nano XTA</td>
+    <td>32.684</td>
+    <td>Petrol</td>
+    <td>3.23</td>
+  </tr>
+  <tr>
+    <th>121</th>
+    <td>Mahindra Scorpio VLX</td>
+    <td>42.000</td>
+    <td>Diesel</td>
+    <td>7.75</td>
+  </tr>
+  <tr>
+    <th>122</th>
+    <td>Mercedes-Benz New C-Class 200 K AT</td>
+    <td>28.352</td>
+    <td>Petrol</td>
+    <td>9.35</td>
+  </tr>
+  <tr>
+    <th>123</th>
+    <td>Maruti Wagon R LXI CNG</td>
+    <td>89.900</td>
+    <td>CNG</td>
+    <td>3.25</td>
+  </tr>
+  <tr>
+    <th>124</th>
+    <td>Honda CR-V 2.4 MT</td>
+    <td>47.700</td>
+    <td>Petrol</td>
+    <td>5.25</td>
+  </tr>
+  <tr>
+    <th>125</th>
+    <td>Volkswagen Vento 1.5 TDI Comfortline AT</td>
+    <td>55.000</td>
+    <td>Diesel</td>
+    <td>7.25</td>
+  </tr>
+  <tr>
+    <th>126</th>
+    <td>Maruti Ciaz VXi Plus</td>
+    <td>44.285</td>
+    <td>Petrol</td>
+    <td>7.47</td>
+  </tr>
+  <tr>
+    <th>127</th>
+    <td>Mahindra XUV500 AT W10 FWD</td>
+    <td>54.000</td>
+    <td>Diesel</td>
+    <td>13.25</td>
+  </tr>
+  <tr>
+    <th>128</th>
+    <td>Maruti Ritz VXI ABS</td>
+    <td>30.232</td>
+    <td>Petrol</td>
+    <td>5.81</td>
+  </tr>
+  <tr>
+    <th>129</th>
+    <td>Maruti Alto K10 VXI</td>
+    <td>88.500</td>
+    <td>Petrol</td>
+    <td>2.60</td>
+  </tr>
+  <tr>
+    <th>130</th>
+    <td>Hyundai Verna VTVT 1.6 AT SX Plus</td>
+    <td>12.645</td>
+    <td>Petrol</td>
+    <td>11.50</td>
+  </tr>
+  <tr>
+    <th>131</th>
+    <td>Maruti Alto LXi BSIII</td>
+    <td>94.385</td>
+    <td>Petrol</td>
+    <td>1.60</td>
+  </tr>
+  <tr>
+    <th>132</th>
+    <td>BMW 1 Series 118d Base</td>
+    <td>31.821</td>
+    <td>Diesel</td>
+    <td>17.22</td>
+  </tr>
+  <tr>
+    <th>133</th>
+    <td>Honda Jazz 1.2 V CVT i VTEC</td>
+    <td>12.000</td>
+    <td>Petrol</td>
+    <td>6.00</td>
+  </tr>
+  <tr>
+    <th>134</th>
+    <td>Honda Civic 2006-2010 1.8 V MT</td>
+    <td>88.578</td>
+    <td>Petrol</td>
+    <td>3.95</td>
+  </tr>
+  <tr>
+    <th>135</th>
+    <td>Mercedes-Benz New C-Class C 220 CDI Avantgarde</td>
+    <td>44.965</td>
+    <td>Diesel</td>
+    <td>17.95</td>
+  </tr>
+  <tr>
+    <th>136</th>
+    <td>Honda Amaze SX i-DTEC</td>
+    <td>45.044</td>
+    <td>Diesel</td>
+    <td>3.70</td>
+  </tr>
+  <tr>
+    <th>137</th>
+    <td>Maruti Swift VVT VXI</td>
+    <td>34.204</td>
+    <td>Petrol</td>
+    <td>5.43</td>
+  </tr>
+  <tr>
+    <th>138</th>
+    <td>Hyundai Santro Xing XO eRLX Euro II</td>
+    <td>80.759</td>
+    <td>Petrol</td>
+    <td>1.67</td>
+  </tr>
+  <tr>
+    <th>139</th>
+    <td>Toyota Fortuner 3.0 Diesel</td>
+    <td>91.235</td>
+    <td>Diesel</td>
+    <td>13.49</td>
+  </tr>
+  <tr>
+    <th>140</th>
+    <td>Chevrolet Beat LT Option</td>
+    <td>38.800</td>
+    <td>Petrol</td>
+    <td>2.85</td>
+  </tr>
+  <tr>
+    <th>141</th>
+    <td>Skoda Rapid 1.5 TDI Elegance</td>
+    <td>83.000</td>
+    <td>Diesel</td>
+    <td>4.75</td>
+  </tr>
+  <tr>
+    <th>142</th>
+    <td>Maruti Ciaz 1.4 Alpha</td>
+    <td>41.283</td>
+    <td>Petrol</td>
+    <td>9.90</td>
+  </tr>
+  <tr>
+    <th>143</th>
+    <td>BMW 3 Series Luxury Line</td>
+    <td>48.000</td>
+    <td>Diesel</td>
+    <td>26.50</td>
+  </tr>
+  <tr>
+    <th>144</th>
+    <td>Audi A4 2.0 TDI 177 Bhp Premium Plus</td>
+    <td>48.214</td>
+    <td>Diesel</td>
+    <td>23.32</td>
+  </tr>
+  <tr>
+    <th>145</th>
+    <td>Maruti Swift VDI</td>
+    <td>35.000</td>
+    <td>Diesel</td>
+    <td>6.25</td>
+  </tr>
+  <tr>
+    <th>146</th>
+    <td>Skoda Rapid 1.5 TDI AT Elegance Plus Black Package</td>
+    <td>54.620</td>
+    <td>Diesel</td>
+    <td>9.86</td>
+  </tr>
+</tbody>
+</table>
+</section>
+
+<!-- Searching in Table -->
+<script>
+    function search_Table() 
+    {
+      let input = document.getElementById('searchbar').value
+      input = input.toLowerCase();
+      // let x = document.getElementsByClassName('animals');
+      // let x = document.getElementsById('list');
+      let x = document.getElementsByTagName('tr');
+      let tr = document.getElementsByTagName('tr');
+
+    //   let y = document.getElementsByTagName('th');
+    //   for (i = 0; i < x.length; i++) 
+    //   {
+    //     if (!x[i].innerHTML.toLowerCase().includes(input))
+    //     {
+    //       x[i].style.display = "none";
+    //     }
+    //     else 
+    //     {
+    //       x[i].style.display = "table-row";
+            
+    //     }
+    //   }
+        
+    for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (!tr[i].innerHTML.toLowerCase().includes(input)){
+        tr[i].style.display = "none";
+        
+
+      } else {
+        tr[i].style.display = "table-row";
+
+      }
+    }       
+  }
+  
+    }
+  </script>
+  
+  
+  
+  
+  
+  <!-- Ascending and descending Sort -->
+  <script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("myTable");
+      switching = true;
+      //Set the sorting direction to ascending:
+      dir = "asc"; 
+      /*Make a loop that will continue until
+      no switching has been done:*/
+      while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+  let rows = document.getElementsByTagName('tr');
+     
+        /*Loop through all table rows (except the
+        first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+          //start by saying there should be no switching:
+          shouldSwitch = false;
+          /*Get the two elements you want to compare,
+          one from current row and one from the next:*/
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          /*check if the two rows should switch place,
+          based on the direction, asc or desc:*/
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch= true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /*If a switch has been marked, make the switch
+          and mark that a switch has been done:*/
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          //Each time a switch is done, increase this count by 1:
+          switchcount ++;      
+        } else {
+          /*If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again.*/
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}
