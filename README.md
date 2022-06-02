@@ -13,7 +13,7 @@ Step-3:-
 Activate the environment .
 
 Step-4:-
-In environment run , python app.py
+In terminal , write command , run python app.py
 
 Step-5:-
 Enjoy the website
